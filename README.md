@@ -1,12 +1,12 @@
 # ARNLE
 Attentional Recurrent Network based on Language Embedding
 ## Run on
-Python 3.6
-Tensorflow 2.5.0
-Numpy 1.19.3
-Pandas 0.23.0
-Scikit-learn 0.23.2
-Gensim 4.1.2
+Python 3.6 \<br>
+Tensorflow 2.5.0 \<br>
+Numpy 1.19.3 \<br>
+Pandas 0.23.0 \<br>
+Scikit-learn 0.23.2 \<br>
+Gensim 4.1.2 \<br>
 
 # Usage
 ## Amino acid sequence embedding: 
