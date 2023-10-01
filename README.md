@@ -31,3 +31,8 @@ python bayes.py --data_frame 'summary_data_framework' --data_adapt 'output_tropi
 ```Python
 python logo_plot_rm_x.py --data_adapt 'tropic_data_framework' --data_nonadapt 'nontropic_data_framework' --sorted_diff 'output_sorted_difference' --out_path 'logo_plot_output_path'
 ```
+
+### Calculate combination mutation bayesian probabilties difference on host tropism:
+```Python
+python combination_mutant_statistic.py --data_frame 'summary_data_framework' --out_dic 'output_difference_dictionary' --out_excel 'output_difference_excel'
+```
