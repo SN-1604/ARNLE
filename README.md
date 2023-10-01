@@ -36,3 +36,8 @@ python logo_plot_rm_x.py --data_adapt 'tropic_data_framework' --data_nonadapt 'n
 ```Python
 python combination_mutant_statistic.py --data_frame 'summary_data_framework' --out_dic 'output_difference_dictionary' --out_excel 'output_difference_excel'
 ```
+
+### CTSI calculation
+```Python
+python CTSI_over_time.py --bayes_monthly 'path_of_monthly bayesian_difference' --output 'output_file'
+```
