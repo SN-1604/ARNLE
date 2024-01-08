@@ -1,5 +1,4 @@
 tensorflow-gpu==2.6.0
-keras==2.6.0
 numpy==1.19.3
 matplotlib==2.2.2
 seaborn==0.11.2
@@ -7,3 +6,4 @@ scikit-learn==0.23.2
 pandas==0.23.0
 Gensim==4.1.2
 tqdm==4.62.3
+logomaker==0.8
