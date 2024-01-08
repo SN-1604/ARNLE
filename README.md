@@ -2,11 +2,14 @@
 Attentional Recurrent Network based on Language Embedding
 ## Run on
 Python 3.6 <br>
-Tensorflow 2.5.0 <br>
+Tensorflow 2.6.0 <br>
+CUDA 11.8 <br>
+CUDNN 8.9.1 <br>
 Numpy 1.19.3 <br>
 Pandas 0.23.0 <br>
 Scikit-learn 0.23.2 <br>
 Gensim 4.1.2 <br>
+Logomaker 0.8 <br>
 
 # Usage
 ### Amino acid sequence embedding: 
