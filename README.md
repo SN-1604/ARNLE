@@ -73,7 +73,7 @@ The parameter '--writer_path' is the path to write training log of the classifie
 The trained model will be writen in '--model_path' with model checkpoint of latest 5 epochs. So the model can be loaded by 'tf.train.import_meta_graph()'.
 ### To predict virus host tropism:
 ```Python
-python predict.py --model_path 'path_of_trained_supervised_Bi-LSTM_model'
+python predict.py --model_path 'path_of_trained_supervised_Bi-LSTM_classifier'
                   --data 'embedded_data_to_predict'
                   --file 'sequence_file_to_predict'
                   --out_path 'output_path_of_predicting_result'
@@ -81,7 +81,9 @@ python predict.py --model_path 'path_of_trained_supervised_Bi-LSTM_model'
                   --batchsize 256(default)
                   --n_split 6(default)
 ```
-
+The user can predict coronavirus host tropism with trained Bi-LSTM classifier we provided through parameter '--model_path'. <br>
+To predict host tropism, the origin sequence fasta is neccessary for program to automatically extract sequence length. <br>
+Then the host tropism probabilities numpy array (.npy) will be generated to '--out_path'.
 ### Perform Post-hoc Bayesian explanation:
 ```Python
 python bayes.py --data_frame 'summary_data_framework'
