@@ -20,7 +20,7 @@ The ELMo language model pre-trained with coronavirus ORF1ab, Spike, Envelop, Mem
 # Usage
 ### Amino acid sequence embedding: 
 ```Python
-python embedding --file 'sequence.fasta'
+python embedding.py --file 'sequence.fasta'
                   --input_type fasta
                   --model_path 'path_of_language_model'
                   --output 'output_file_of_embedding_data'
@@ -29,14 +29,14 @@ python embedding --file 'sequence.fasta'
 ```
 * Demo to run embedding of given sequence.fasta:
 ```Python
-python embedding --file './data/sequence_train_S.fasta'
+python embedding.py --file './data/sequence_train_S.fasta'
                   --input_type fasta
                   --model_path 'path_of_language_model'
                   --output './embedding/embedded_sequence_train_S.npy'
                   --max_length 264
 ```
 Then a numpy type file of embeded vector sequences of input 'sequence_train_S.fasta' will be output to './embedding/embedded_sequence_train_S.npy'. (size [sequence_amount, 264, 1024])
-### To train supervised Bi-LSTM model:
+### To train supervised Bi-LSTM classifier:
 ```Python
 python supervised Bi-LSTM train.py --data_train 'embedded_train_data'
                                   --label_train 'label_file_of_train_data'
@@ -53,6 +53,24 @@ python supervised Bi-LSTM train.py --data_train 'embedded_train_data'
                                   --lr 1e-3(default)
                                   --max_length 264(default)
 ```
+* Demo to train a supervised Bi-LSTM classifier:
+  Assuming that train and validation sequences have been embedded with 'embedding.py' and output to './embedding/embedded_sequence_train_S.npy' and './embedding/embedded_sequence_val_S.npy'. <br>
+  Before training, it's neccessary to prepare files of sequence length and label of input sequences. <br>
+  The length file should contain length of each sequence with line break '\n' separated. <br>
+  The label file should contain host species label (human, bat, carnivora, artiodactyla, swine, rodentia) with line break '\n' separated. The program will automatically transfer the string label to integar label 0-5.
+  Then the supervised Bi-LSTM classifier can be trained with:
+```Python
+python supervised Bi-LSTM train.py --data_train './embedding/embedded_sequence_train_S.npy'
+                                  --label_train 'label_train.txt'
+                                  --length_train 'length_train.txt'
+                                  --data_val './embedding/embedded_sequence_val_S.npy'
+                                  --label_val 'label_val.txt'
+                                  --length_val 'length_val.txt'
+                                  --writer_path 'path_to_write_train_log'
+                                  --model_path 'path_to_save_trained_model'
+```
+The parameter '--writer_path' is the path to write training log of the classifier which can be load by TensorBoard to observe loss curves and variable state. <br>
+The trained model will be writen in '--model_path' with model checkpoint of latest 5 epochs. So the model can be loaded by 'tf.train.import_meta_graph()'.
 ### To predict virus host tropism:
 ```Python
 python predict.py --model_path 'path_of_trained_supervised_Bi-LSTM_model'
