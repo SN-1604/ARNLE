@@ -11,7 +11,7 @@ Scikit-learn 0.23.2 <br>
 Gensim 4.1.2 <br>
 Logomaker 0.8 <br>
 
-## Run on
+## Installation
 To install environment：
 ```Python
 pip install -r requirement.txt
