@@ -81,9 +81,9 @@ python predict.py --model_path 'path_of_trained_supervised_Bi-LSTM_classifier'
                   --batchsize 256(default)
                   --n_split 6(default)
 ```
-The user can predict coronavirus host tropism with trained Bi-LSTM classifier we provided through parameter '--model_path'. <br>
-To predict host tropism, the origin sequence fasta is neccessary for program to automatically extract sequence length. <br>
-Then the host tropism probabilities numpy array (.npy) will be generated to '--out_path'.
+* The user can predict coronavirus host tropism with trained Bi-LSTM classifier we provided through parameter '--model_path'. <br>
+* To predict host tropism, the origin sequence fasta is neccessary for program to automatically extract sequence length. <br>
+* Then the host tropism probabilities numpy array (.npy) will be generated to '--out_path'.
 ### Perform Post-hoc Bayesian explanation:
 ```Python
 python bayes.py --data_frame 'summary_data_framework'
