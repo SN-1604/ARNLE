@@ -46,7 +46,8 @@ python supervised Bi-LSTM train.py --data_train 'embedded_train_data'
                                   --length_val 'length_file_of_validation_data'
                                   --writer_path 'path_to_write_train_log'
                                   --model_path 'path_to_save_trained_model'
-                                  --epoch 10(default) --keepprob 0.8(default)
+                                  --epoch 10(default)
+                                  --keepprob 0.8(default)
                                   --num_class 6(default)
                                   --hidden_size '256,128'(default)
                                   --lr 1e-3(default)
