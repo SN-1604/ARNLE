@@ -92,7 +92,10 @@ python bayes.py --data_frame 'summary_data_framework'
                 --data_adapt 'output_tropic_data_framework'
                 --data_nonadapt 'output_nontropic_data_framework'
 ```
-
+* The input '--data_frame' should be a pandas framework as:
+  |id|country|data|site 1|site 2|...|site N|Prob_PR|Prob_CH|Prob_CA|Prob_AR|Prob_SU|Prob_RD|
+  |--|:-----:|:--:|:----:|:----:|...|:----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+* The program will generate two .csv files containing Bayesian probabilities of specific site and specific amino acid in tropic and non-tropic sequences.
 ### Analyze top amino acid site influencing virus host tropism:
 ```Python
 python logo_plot_rm_x.py --data_adapt 'tropic_data_framework'
