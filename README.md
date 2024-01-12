@@ -54,11 +54,11 @@ python supervised Bi-LSTM train.py --data_train 'embedded_train_data'
                                   --max_length 264(default)
 ```
 * Demo to train a supervised Bi-LSTM classifier:
-Assuming that train and validation sequences have been embedded with 'embedding.py' and output to './embedding/embedded_sequence_train_S.npy' and './embedding/embedded_sequence_val_S.npy'. <br>
-Before training, it's neccessary to prepare files of sequence length and label of input sequences. <br>
-The length file should contain length of each sequence with line break '\n' separated. <br>
-The label file should contain host species label (human, bat, carnivora, artiodactyla, swine, rodentia) with line break '\n' separated. The program will automatically transfer the string label to integar label 0-5.
-Then the supervised Bi-LSTM classifier can be trained with:
+* Assuming that train and validation sequences have been embedded with 'embedding.py' and output to './embedding/embedded_sequence_train_S.npy' and './embedding/embedded_sequence_val_S.npy'. <br>
+* Before training, it's neccessary to prepare files of sequence length and label of input sequences. <br>
+* The length file should contain length of each sequence with line break '\n' separated. <br>
+* The label file should contain host species label (human, bat, carnivora, artiodactyla, swine, rodentia) with line break '\n' separated. The program will automatically transfer the string label to integar label 0-5.
+* Then the supervised Bi-LSTM classifier can be trained with:
 ```Python
 python supervised Bi-LSTM train.py --data_train './embedding/embedded_sequence_train_S.npy'
                                   --label_train 'label_train.txt'
