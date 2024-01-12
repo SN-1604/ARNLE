@@ -19,7 +19,12 @@ pip install -r requirement.txt
 # Usage
 ### Amino acid sequence embedding: 
 ```Python
-python embedding --file 'sequence.fasta' --input_type fasta --model_path 'path_of_language_model' --output 'output_file_of_embedding_data' --batchsize(optional) 256(default) --max_length max_length_of_sequence_data
+python embedding --file 'sequence.fasta'
+--input_type fasta
+--model_path 'path_of_language_model'
+--output 'output_file_of_embedding_data'
+--batchsize(optional) 256(default)
+--max_length max_length_of_sequence_data
 ```
 ### To train supervised Bi-LSTM model:
 ```Python
