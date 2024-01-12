@@ -17,7 +17,7 @@ To install environment：
 pip install -r requirement.txt
 ```
 The ELMo language model pre-trained with coronavirus ORF1ab, Spike, Envelop, Membrane and Nucleocapsid is available on Zenodo (DOI:10.5281/zenodo.8207208). The supervised Bi-LSTM classifier trained on coronavirus Spike protein can also be obtained on Zenodo (named as "model_supervised_attentional_recurrent_network"). <br>
-Demo to run embedding of given sequence.fasta:
+* Demo to run embedding of given sequence.fasta:
 ```Python
 python embedding --file './data/sequence_train_S.fasta'
                   --input_type fasta
