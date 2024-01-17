@@ -28,6 +28,7 @@ python embedding.py --file 'sequence.fasta'
                   --output 'output_file_of_embedding_data'
                   --batchsize(optional) 256(default)
                   --max_length max_length_of_sequence_data
+                  --split(optinal) 6(default)
 ```
 * Demo to run embedding of given sequence.fasta:
 ```Python
