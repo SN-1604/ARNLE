@@ -7,6 +7,7 @@ parser = argparse.ArgumentParser('Perform Post-hoc Bayesian explanation')
 parser.add_argument('--data_frame', type=str, help='pandas data framework of merged sequences and predicting probabilities')
 parser.add_argument('--data_adapt', type=str, help='output data framework of specific host tropic amino acid probabilities')
 parser.add_argument('--data_nonadapt', type=str, help='output data framework of other host amino acid probabilities')
+args = parser.parse_args(sys.argv[1:])
 
 df = pd.read_csv(args.data_frame, index_col=0, engine='python')
 df = df.fillna('-')
