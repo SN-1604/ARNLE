@@ -4,11 +4,14 @@ import copy
 from tqdm import tqdm
 import time
 import numpy as np
+import sys
+import argparse
 
 parser = argparse.ArgumentParser('calculate combination mutation bayesian probabilties difference on host tropism')
 parser.add_argument('--data_frame', type=str, help='pandas data framework of merged sequences and predicting probabilities')
 parser.add_argument('--out_dic', type=str, help='output dictionary of combination mutations bayesian probabilties difference')
 parser.add_argument('--out_excel', type=str, help='output excel of combination mutations bayesian probabilties difference')
+args = parser.parse_args(sys.argv[1:])
 
 dic_mutant = {'478': 'K', '452': 'R', '142': 'D', '27': 'S', '25': '-', '24': '-', '26': '-', '376': 'A', '371': 'F',
               '405': 'N', '19': 'I', '408': 'S', '501': 'Y', '213': 'G', '681': 'H', '156': 'G', '157': '-', '158': '-',
