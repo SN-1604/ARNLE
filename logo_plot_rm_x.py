@@ -10,6 +10,7 @@ parser.add_argument('--data_adapt', type=str, help='data framework of specific h
 parser.add_argument('--data_nonadapt', type=str, help='data framework of other host amino acid probabilities')
 parser.add_argument('--sorted_diff', type=str, help='Sorted difference of tropic and other host amino acid probabilities')
 parser.add_argument('--out_path', type=str, help='Output path of logo plot figures')
+args = parser.parse_args(sys.argv[1:])
 
 df_adapt = pd.read_csv(args.data_adapt, index_col=0)
 df_inadapt = pd.read_csv(args.data_nonadapt, index_col=0)
