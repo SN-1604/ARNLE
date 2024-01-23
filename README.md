@@ -107,6 +107,7 @@ python logo_plot_rm_x.py --data_adapt 'tropic_data_framework'
 ```
 * With input of tropic and non-tropic data framework output by 'bayes.py', the script will produce a new csv of sorted amino acid site influencing virus host tropism through parameter '--sorted_diff'.
 * Two .png graph of tropic and non-tropic amino acid distribution in the top 20 sites will be produced through parameter '--out_path'.
+* According to the insert of three amino acids in 213 site, all the site number over 213 of sequences without this insert mutation should be subtracted by 3 to align with the real site.
 ### Calculate combination mutation bayesian probabilties difference on host tropism:
 ```Python
 python combination_mutant_statistic.py --data_frame 'summary_data_framework'
