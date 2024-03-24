@@ -11,6 +11,7 @@ Scikit-learn 0.23.2 <br>
 Gensim 4.1.2 <br>
 Logomaker 0.8 <br>
 
+* GPU is neccessary to run the training and predicting codes.
 ## Installation
 To install environment：
 ```Python
